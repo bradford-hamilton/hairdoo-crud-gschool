@@ -1,0 +1,26 @@
+
+<div class='container'>
+  <div class='row col-lg-4 col-lg-offset-4'
+    <br><br>
+    <h1 class='shadow'>Today's top doos<h1>
+    <br><br>
+    <a href="/hair/add">Add a Doo!</a>
+    <br><br><br><br>
+  </div>
+</div>
+
+<ul class='container-fluid'>
+  {{#each hairdoos}}
+    <li class='row col-lg-4'>
+      <h3>{{this.name}}</h3>
+      <a id='info-link' href="/hair/{{this.id}}">Click for more info</a>
+      <br>
+      <br>
+      <img src={{this.image}} alt="I couldn't figure out how to use an img address so now my post looks like shit.">
+      <br>
+      <p>{{this.description}}</p>
+      <h5>HairDoo Rating {{this.rating}}/10</h5>
+      <br><br><br><br><br>
+    </li>
+  {{/each}}
+</ul>
